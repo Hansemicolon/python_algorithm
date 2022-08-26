@@ -43,9 +43,9 @@ def test_finding_prime_fermat(number):
 
 
 if __name__ == '__main__':
-    print(time.time())
+    start = time.process_time()
     number1 = 17
     number2 = 40000
     assert (test_finding_prime_fermat(number1)is True)
     assert (test_finding_prime_fermat(number2) is False)
-    print(time.time())
+    print(f"Time elapsed : {time.process_time() - start}") # 초 단위로 프린트됨
