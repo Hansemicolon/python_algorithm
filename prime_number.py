@@ -25,6 +25,7 @@ def test_finding_prime_sqrt(number):
     for x in range(2, int(math.sqrt(num)) + 1):  # 제곱근까지만 for
         if number % x == 0:
             return False
+    return True
 
 
 # a^P-1로 나눈 나머지가 1이면 P는 소수다
@@ -43,9 +44,11 @@ def test_finding_prime_fermat(number):
 
 
 if __name__ == '__main__':
-    print(time.time())
+    print(time.process_time())
     number1 = 17
     number2 = 40000
-    assert (test_finding_prime_fermat(number1)is True)
+    # assert (test_finding_prime_sqrt(number1) is True)
+    # assert (test_finding_prime_sqrt(number2) is False)
+    assert (test_finding_prime_fermat(number1) is True)
     assert (test_finding_prime_fermat(number2) is False)
-    print(time.time())
+    print(time.process_time())
